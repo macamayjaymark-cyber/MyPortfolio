@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============================================================
+    PAGE TITLE & META
+    Change the title and description to your own name/info
+  ============================================================ -->
+  <title>Jaymark Macamay — Full-Stack Developer Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Jaymark Macamay, a full-stack developer building elegant web experiences." />
+
+  <!-- Google Fonts (Inter + Fira Code) — feel free to swap fonts at fonts.google.com -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+
+  <!-- PAGE LOADER (auto-hides when page finishes loading) -->
+  <div class="loader" id="pageLoader">
+    <div class="loader-inner">
+      <div class="loader-bars">
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+      </div>
+      <p class="loader-text">Loading<span class="loader-dots">...</span></p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+    NAVBAR
+    - Logo text: change "JM" to your initials
+    - Nav links: add/remove <a> tags as needed
+  ============================================================ -->
+  <header class="nav" id="navbar">
+    <a href="#" class="logo">JM<span>.</span></a><!-- ← Change initials here -->
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact">Contact</a>
+      <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+      HERO SECTION
+      - Change your name in the <h1> tag
+      - Change the subtitle in <h2>
+      - Change the description in <p class="lead">
+      - PROFILE PHOTO: replace the src below with your own photo path
+        Example: src="assets/images/my-photo.jpg"
+        Recommended size: 300x300px, square or circular crop
+    ============================================================ -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">Hi, I'm</p>
+        <h1>Jaymark Macamay<span class="cursor-blink">_</span></h1><!-- ← Your name -->
+        <h2>I design and develop for the  <span class="highlight">web.</span></h2><!-- ← Your tagline -->
+        <p class="lead">
+          Front-end developer with a foundation in networking, crafting fast, responsive, and visually engaging digital
+          interfaces that connect people and technology seamlessly.
+          <!-- ↑ Change this description to match your skills/focus -->
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View my work</a>
+          <a href="#contact" class="btn btn-outline">Get in touch</a>
+        </div>
+      </div>
+
+      <!-- PROFILE PHOTO
+           To change photo: replace the src value below
+           Use a local file: src="assets/images/profile.jpg"
+           Or an online URL: src="https://yoursite.com/photo.jpg"  -->
+      <div class="hero-photo">
+        <img src="./assets/images/profile.jpg" alt="Jaymark Macamay profile photo" id="profilePhoto" />
+      </div>
+
+      <div class="hero-glow"></div>
+      <div class="scroll-indicator"><span></span></div>
+    </section>
+
+
+    <!-- ============================================================
+      ABOUT SECTION
+      - Edit the paragraphs to describe yourself
+      - SKILLS LIST: add or remove <li> items below
+    ============================================================ -->
+    <section id="about" class="section reveal">
+      <h3><span class="num">01.</span> About Me</h3>
+      <div class="about-grid">
+        <div class="about-text">
+          <!-- ↓ Edit these paragraphs with your own story -->
+          <p>
+          I'm a front-end developer who loves transforming ideas into smooth, interactive web experiences.
+          My focus is on building interfaces that are fast, accessible, and visually engaging — blending creativity with solid technical foundations.
+          </p>
+          <p>
+            When I'm not coding, I explore new frameworks, learn about network systems, or fine-tune connectivity setups that make digital experiences more reliable.
+            Lately, I’ve been diving deeper into <strong>Laravel, Bootstrap</strong>, and <strong>basic networking principles</strong>
+          </p>
+        </div>
+        <div class="skills-wrap">
+          <p class="skills-label">Technologies I work with:</p>
+          <!-- ↓ Add or remove skills here -->
+          <ul class="skills">
+            <li>HTML, CSS, JavaScript</li>
+            <li>Networking Basics </li>
+            <li>React</li>
+            <li>Laravel , Bootsrap</li>
+            <li>Node.js</li>
+            <li>TypeScript</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+      PROJECTS SECTION
+      - Projects are loaded from script.js — edit them there!
+      - Open: assets/js/script.js → find "PROJECT DATA"
+      - Each project has: icon, title, desc, tags[], link
+    ============================================================ -->
+    <section id="projects" class="section reveal">
+      <h3><span class="num">02.</span> Projects</h3>
+      <div class="projects-grid" id="projectGrid"></div>
+      <!-- Cards are injected here by script.js -->
+    </section>
+
+
+    <!-- ============================================================
+      CERTIFICATES SECTION
+      HOW TO CHANGE A CERTIFICATE IMAGE:
+        1. Save your certificate image inside: assets/images/
+        2. Replace the src="..." with: src="assets/images/your-cert.jpg"
+      HOW TO ADD MORE CERTIFICATES:
+        Copy one <div class="cert-card">...</div> block and paste it below
+      HOW TO REMOVE A CERTIFICATE:
+        Delete the entire <div class="cert-card">...</div> block
+    ============================================================ -->
+    <section id="certificates" class="section reveal">
+      <h3><span class="num">03.</span> Certificates</h3>
+      <div class="certs-grid">
+
+        <!-- CERTIFICATE 1 ↓ Change src, title, and issuer -->
+        <div class="cert-card">
+          <img src="assets/images/cert-1.png" />
+          <div class="cert-info">
+            <h4>Journey from  Science Practitioner to Information Technology Specialist</h4><!-- ← Certificate name -->
+            <p>October 8 2025</p><!-- ← Issuer and year -->
+          </div>
+        </div>
+
+        <!-- CERTIFICATE 2 ↓ Change src, title, and issuer -->
+        <div class="cert-card">
+          <img src="assets/images/cert-2.png" alt="React and TypeScript Certificate" />
+          <div class="cert-info">
+            <h4>The Power of Color in Graphic Design: Theory, Physchology, and Practice</h4>
+            <p>November 5 2025</p>
+          </div>
+        </div>
+
+        <!-- CERTIFICATE 3 ↓ Change src, title, and issuer -->
+        <div class="cert-card">
+          <img src="assets/images/cert-3.jpeg" alt="AWS Cloud Practitioner Certificate" />
+          <div class="cert-info">
+            <h4>LevelApp Participant RealiTech</h4>
+            <p>May 16 2025</p>
+          </div>
+        </div>
+
+        <!-- CERTIFICATE 4 ↓ Change src, title, and issuer -->
+        <div class="cert-card">
+          <img src="assets/images/cert-4.png" alt="JavaScript Algorithms Certificate" />
+          <div class="cert-info">
+            <h4>Cisco Networking Academy  Ethical Hacker </h4>
+            <p>December 4  2025</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <img src="assets/images/cert-5.png" alt="JavaScript Algorithms Certificate" />
+          <div class="cert-info">
+            <h4>Cisco Networking Academy  Cybersecurity Essentials</h4>
+            <p>May 30 2025</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <img src="assets/images/cert-6.png" alt="JavaScript Algorithms Certificate" />
+          <div class="cert-info">
+            <h4>Cisco Networking Academy  Introduction of Packet Tracer</h4>
+            <p>February 5 2024</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <img src="assets/images/cert-7.png" alt="JavaScript Algorithms Certificate" />
+          <div class="cert-info">
+            <h4>TESDA NC-II  Computer Systems Servicing</h4>
+            <p>June 27 2022</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <img src="assets/images/cert-8.png" alt="JavaScript Algorithms Certificate" />
+          <div class="cert-info">
+            <h4>Gforest Narra Tree </h4>
+            <p>April 27 2026</p>
+          </div>
+        </div>
+
+        <!-- To add more: copy and paste one cert-card block above and edit it -->
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+      CONTACT SECTION — sends email directly to your Gmail
+      HOW IT WORKS:
+        Uses FormSubmit.co (free service, no backend needed)
+        First submission will ask you to confirm your email
+
+      HOW TO CHANGE YOUR EMAIL:
+        Find the <form action="..."> line below
+        Replace "YOUR_GMAIL@gmail.com" with your actual Gmail address
+        Example: action="https://formsubmit.co/jaymark@gmail.com"
+
+      NOTE: FormSubmit is FREE and works for static/HTML sites
+    ============================================================ -->
+    <section id="contact" class="section contact reveal">
+      <span class="contact-num">04.</span>
+      <h3>Get In Touch</h3>
+      <p>
+        My inbox is always open. Whether you have a question, a project idea,
+        or just want to say hi — I'll do my best to get back to you!
+      </p>
+
+      <!-- CONTACT FORM
+           ↓ Replace YOUR_GMAIL@gmail.com with your real Gmail address -->
+      <form class="contact-form" action="https://formsubmit.co/jaymarkmacamay46@gmail.com" method="POST">
+        <!-- Honeypot spam protection (hidden, do not remove) -->
+        <input type="text" name="_honey" style="display:none" />
+        <!-- Disable FormSubmit's default captcha page -->
+        <input type="hidden" name="_captcha" value="false" />
+        <!-- Redirect after submission — change to your own thank-you page or remove -->
+        <input type="hidden" name="_next" value="https://jaymarkmacamay46@gmail.com" />
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Let's work together!" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Hi Jaymark, I'd love to chat about..."
+            required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary form-submit">
+          Send Message 📨
+        </button>
+      </form>
+
+      <!-- SOCIAL LINKS ↓ Replace each href with your real profile URL -->
+      <div class="social-links">
+
+        <!-- GitHub ↓ e.g. https://github.com/yourname -->
+        <a href="https://github.com/macamayjaymark-cyber" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+            <path
+              d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+          </svg>
+        </a>
+
+        <!-- Facebook ↓ e.g. https://facebook.com/yourname -->
+        <a href="https://www.facebook.com/profile.php?id=100083394481638" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+            <path
+              d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+          </svg>
+        </a>
+
+        <!-- Instagram ↓ e.g. https://instagram.com/yourname -->
+        <a href="https://www.instagram.com/jaymark.plantinosmacamay/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+          </svg>
+        </a>
+
+        <!-- Telegram ↓ e.g. https://t.me/yourusername -->
+        <a href="https://t.me/Jek3194" target="_blank" rel="noopener" aria-label="Telegram">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+            <path
+              d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+          </svg>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+    FOOTER — change the name to yours
+  ============================================================ -->
+  <footer>
+    <p>Designed &amp; Built by <strong>Jaymark Macamay</strong></p><!-- ← Your name -->
+    <p class="footer-sub">Made with love &amp; lots of coffe</p>
+  </footer>
+
+  <!-- Main JavaScript file (projects data, theme toggle, animations) -->
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
